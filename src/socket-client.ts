@@ -1,4 +1,3 @@
-import type { Socket } from 'socket.io-client';
 import {
     ChannelEvent,
     LoginResponse,
@@ -10,7 +9,7 @@ import {
     EventAction,
 } from './types';
 
-function SocketClient(socket: Socket) {
+function SocketClient(socket: any) {
     /**
      *
      * @returns

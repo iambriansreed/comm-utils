@@ -1,4 +1,3 @@
-import type { Socket } from 'socket.io';
 import {
     SocketEvent,
     EventAction,
@@ -33,7 +32,7 @@ function SocketServer({
     defaultChannel?: string;
     getUid: GetUid;
     maxUsers: number;
-    socket: Socket;
+    socket: any;
 }) {
     // -
 
@@ -183,7 +182,6 @@ function SocketServer({
 
     socket.on(SocketEvent.ChannelLogout, (payload: ChannelAction, callback?: (response: LogoutResponse) => void) => {
         const response = channelLogout(payload);
-
         socket.broadcast.emit(SocketEvent.ChannelLogout, response);
         socket.leave(payload.channel);
         callback?.(response);
