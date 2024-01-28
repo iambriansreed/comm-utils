@@ -1,6 +1,6 @@
 {
-    "name": "@bsr-comms/utils",
-    "version": "0.1.0",
+    "name": "@bsr-comm/utils",
+    "version": "0.1.1",
     "main": "build/index.js",
     "types": "build/index.d.ts",
     "private": true,
